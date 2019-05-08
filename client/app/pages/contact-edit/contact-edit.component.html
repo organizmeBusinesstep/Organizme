@@ -1,0 +1,37 @@
+<form #skaffolderForm="ngForm" class="container-fluid">
+    
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Name" [(ngModel)]="item.name"  name="name" id="name" required>
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Surname" [(ngModel)]="item.surname"  name="surname" id="surname" >
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Email" [(ngModel)]="item.email"  name="email" id="email" >
+    </mat-form-field>
+    
+    <mat-form-field class="full-width">
+        <input matInput type="text" placeholder="Phone" [(ngModel)]="item.phone"  name="phone" id="phone" >
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <textarea matInput type="text" placeholder="Note" [(ngModel)]="item.note"  name="note" id="note" >
+        </textarea>
+    </mat-form-field>
+    
+    <mat-form-field class="full-width mt-20">
+        <mat-select placeholder="Company" class="full-width" #company='ngModel' [(ngModel)]="item.company" name="company" id="company">
+                <mat-option *ngFor="let item of listCompany" value="{{item._id}}">
+                {{item.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>   
+
+    <!-- BUTTON BAR -->
+    <div class="mt-40">
+        <button mat-raised-button color="primary" class="pull-right mr-5" (click)="save(skaffolderForm.valid, item)">Save</button>
+        <button mat-raised-button class="pull-right " (click)="close()">Close</button>
+    </div>
+</form>

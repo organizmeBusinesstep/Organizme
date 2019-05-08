@@ -1,0 +1,47 @@
+
+<div class="detail-container">
+
+    <div>
+        <label>
+            <mat-icon>person</mat-icon>
+            Name
+        </label>
+        {{item.name}} {{item.surname}}
+    </div>
+    
+    <div>
+        <label>
+           <mat-icon>mail</mat-icon>
+            Email
+        </label>
+        {{item.email}}
+    </div>
+    
+    <div>
+        <label>
+           <mat-icon>phone</mat-icon>
+            Phone
+        </label>
+        {{item.phone}}
+    </div>
+    
+    <div>
+        <label>
+           <mat-icon>note</mat-icon>
+            Note
+        </label>
+        {{item.note}}
+    </div>
+    
+    <div>
+        <label>
+           <mat-icon>domain</mat-icon>
+            Company
+        </label>
+        {{item.company}}
+    </div>
+
+    <div>
+        <button mat-raised-button class="pull-right" color="primary" (click)="close()">Close</button>        
+    </div>
+</div>
